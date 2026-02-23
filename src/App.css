@@ -1,0 +1,209 @@
+/* RESET & BASE STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+body {
+  background-color: #f3f4f6; /* Light gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* MAIN CARD CONTAINER */
+.app-container {
+  background: white;
+  width: 100%;
+  max-width: 500px; /* Limits width nicely */
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Soft modern shadow */
+  overflow: hidden;
+}
+
+/* HEADER */
+.app-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.app-header h1 {
+  font-size: 1.5rem;
+  color: #111827;
+}
+
+/* INPUT SECTION (ADD MOVIE) */
+.input-group {
+  padding: 20px 24px;
+  display: flex;
+  gap: 10px;
+  background-color: #f9fafb;
+}
+
+.input-text {
+  flex: 1; /* Grows to fill space */
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.input-select {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+}
+
+.btn-add {
+  background-color: #2563eb; /* Blue */
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-add:hover {
+  background-color: #1d4ed8;
+}
+
+/* FILTER SECTION */
+.filters {
+  padding: 16px 24px;
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  padding: 6px 12px;
+  border-radius: 20px; /* Pill shape */
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #4b5563;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background-color: #f3f4f6;
+}
+
+/* Style for the active filter button */
+.filter-btn.active {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* MOVIE LIST SECTION */
+.movie-list {
+  list-style: none;
+  padding: 0;
+  max-height: 400px; /* Scroll if list gets too long */
+  overflow-y: auto;
+}
+
+.movie-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background 0.2s;
+}
+
+.movie-item:hover {
+  background-color: #fafafa;
+}
+
+/* Movie Text Styles */
+.movie-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-title {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.movie-genre {
+  font-size: 0.8rem;
+  color: #6b7280;
+  background: #e5e7eb;
+  padding: 2px 6px;
+  border-radius: 4px;
+  width: fit-content;
+  margin-top: 4px;
+}
+
+/* Styles for when a movie is watched */
+.movie-item.watched .movie-title {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+/* ACTIONS (BUTTONS inside list) */
+.movie-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn-toggle {
+  background: white;
+  border: 1px solid #d1d5db;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.btn-toggle:hover {
+  background: #f3f4f6;
+}
+
+.btn-delete {
+  background: #fee2e2; /* Light Red */
+  color: #ef4444; /* Red Text */
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.btn-delete:hover {
+  background: #fecaca;
+}
+
+/* EMPTY STATE */
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* FOOTER STATS */
+.stats-footer {
+  padding: 16px 24px;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #4b5563;
+  font-weight: 500;
+}
